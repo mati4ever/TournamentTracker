@@ -1,6 +1,6 @@
 ﻿namespace TrackerUI
 {
-    partial class TurnamentDashboardForm
+    partial class TournamentDashboardForm
     {
         /// <summary>
         /// Required designer variable.
@@ -42,9 +42,9 @@
             this.headerLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.headerLabel.Location = new System.Drawing.Point(120, 9);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(420, 54);
+            this.headerLabel.Size = new System.Drawing.Size(443, 54);
             this.headerLabel.TabIndex = 3;
-            this.headerLabel.Text = "Turnament Dashboard";
+            this.headerLabel.Text = "Tournament Dashboard";
             // 
             // loadExistingTournamentDropDown
             // 
@@ -94,12 +94,12 @@
             this.createTurnamentButton.Text = "Create Tournament";
             this.createTurnamentButton.UseVisualStyleBackColor = true;
             // 
-            // TurnamentDashboardForm
+            // TournamentDashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(674, 414);
+            this.ClientSize = new System.Drawing.Size(656, 405);
             this.Controls.Add(this.createTurnamentButton);
             this.Controls.Add(this.loadTournamentButton);
             this.Controls.Add(this.loadExistingTournamentDropDown);
@@ -107,8 +107,7 @@
             this.Controls.Add(this.headerLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "TurnamentDashboardForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
+            this.Name = "TournamentDashboardForm";
             this.Text = "Turnament Dashboard";
             this.ResumeLayout(false);
             this.PerformLayout();

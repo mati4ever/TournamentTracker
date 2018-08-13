@@ -4,24 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrackerLibrary
+namespace TrackerLibrary.Models
 {
     public class PersonModel
     {
         /// <summary>
-        /// Represents first name of team member.
+        /// The first name of the person.
         /// </summary>
         public string FirstName { get; set; }
         /// <summary>
-        /// Represents last name of team memmber.
+        /// The last name of the person.
         /// </summary>
         public string LastName { get; set; }
         /// <summary>
-        /// Represents email address of team memmber.
+        /// The primary email address of the person.
         /// </summary>
         public string EmailAddress { get; set; }
         /// <summary>
-        /// Represents phone number of team memmber.
+        /// The primary cell phone number of the person.
         /// </summary>
         public string CellphoneNumber { get; set; }
 

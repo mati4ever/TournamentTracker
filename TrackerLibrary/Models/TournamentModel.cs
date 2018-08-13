@@ -4,28 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrackerLibrary
+namespace TrackerLibrary.Models
 {
     public class TournamentModel
     {
         /// <summary>
-        ///  Represents name of the tournament.
+        ///  The name given to this tournament.
         /// </summary>
         public string TournamentName { get; set; }
         /// <summary>
-        /// Represents the size of the entry fee.
+        /// The amount of money that each team needs to put up to enter.
         /// </summary>
         public decimal EntryFee { get; set; }
         /// <summary>
-        /// Represents teams participating in the tournament.
+        /// The set of teams that have been entered.
         /// </summary>
         public List<TeamModel> EnteredTeams { get; set; } = new List<TeamModel>();
         /// <summary>
-        /// Represents list of prizes.
+        /// The list of prizes for the various places.
         /// </summary>
         public List<PrizeModel> Prizes { get; set; } = new List<PrizeModel>();
         /// <summary>
-        /// Represents list of rounds.
+        /// The matchup per round.
         /// </summary>
         public List<List<MatchupModel>> Rounds { get; set; } = new List<List<MatchupModel>>();
 

@@ -65,6 +65,33 @@ namespace TrackerLibrary.DataAccess
              
         }
 
+        public TeamModel CreateTeam(TeamModel model)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+                var p = new DynamicParameters();
+                p.Add("@TeamName", model.TeamName);
+                p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                connection.Execute("Tournaments.dbo.spTeams_Insert", p, commandType: CommandType.StoredProcedure);
+
+                model.Id = p.Get<int>("@id");
+
+                foreach (PersonModel tm in model.TeamMembers)
+                {
+                    p = new DynamicParameters();
+                    p.Add("@TeamId", model.Id); 
+                    p.Add("@PersonId", tm.Id); 
+
+                    connection.Execute("Tournaments.dbo.spTeamMembers   _Insert", p, commandType: CommandType.StoredProcedure);
+                     
+                }
+
+                return model;
+
+            }
+        }
+
         public List<PersonModel> GetPerson_All()
         {
             List<PersonModel> output;
